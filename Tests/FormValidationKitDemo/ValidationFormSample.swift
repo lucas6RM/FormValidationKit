@@ -1,11 +1,6 @@
-//
-//  ValidationFormSample.swift
-//  BacASable
-//
-//  Created by lucas mercier on 04/09/2025.
-//
 
 import SwiftUI
+import FormValidationKit
 
 
 @available(iOS 15.0, *)
@@ -106,8 +101,6 @@ struct ValidationFormSample: View {
                 .background(.gray.opacity(0.2))
                 .cornerRadius(16)
         }
-        
-        
     }
 }
 

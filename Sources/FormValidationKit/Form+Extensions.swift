@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 15.0, *)
 public extension Form {
     
     func validateForm(_ onValidate: @escaping ([ValidationResult]) -> Void) -> some View {

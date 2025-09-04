@@ -1,10 +1,14 @@
 
 import SwiftUICore
 
-@available(iOS 13.0, *)
+@available(iOS 15.0, *)
 public struct TextFormView<Content : View> : View {
     @State var validationSeeds : [ValidationResult] = []
     @ViewBuilder var content : (( @escaping () -> Bool)) -> Content
+    
+    public init(@ViewBuilder content: @escaping (( @escaping () -> Bool)) -> Content) {
+            self.content = content
+    }
     
     public var body: some View {
         content(validateAllFields)
