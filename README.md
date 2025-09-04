@@ -113,6 +113,8 @@ TextField("Name", text: $name)
 
 ## Use Case 2: Native SwiftUI Form
 
+![Form validation demo](Assets/NativeFormSample.gif)
+
 Retrieve all field validations using the `validateForm` extension:
 
 ```swift
