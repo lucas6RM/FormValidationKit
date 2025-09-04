@@ -16,7 +16,7 @@
     
 This project is open source! Anyone is welcome to **fork**, make changes, and submit **pull requests**.
 
-This library is widely inspired by the following article, and I want to credit the author:
+This library is widely inspired by the following article:
 [How to validate TextFields in SwiftUI like a pro](https://medium.com/@mhmtkrnlk/how-to-validate-textfields-in-swiftui-like-a-pro-3dbe368d1570)
 
 
@@ -73,7 +73,13 @@ public struct ValidationResult: Equatable {
 
 ## Use Case 1: Custom Form with `TextFormView`
 
-![Form validation demo](Assets/CustomFormSample.gif)
+
+
+<p align="center">
+  <img src="Assets/CustomFormSample.gif" alt="Custom Form validation demo" width="400"/>
+</p>
+
+
 
 For custom layouts or non-Form views:
 
@@ -115,7 +121,13 @@ TextField("Name", text: $name)
 
 ## Use Case 2: Native SwiftUI Form
 
-![Form validation demo](Assets/NativeFormSample.gif)
+
+
+<p align="center">
+  <img src="Assets/NativeFormSample.gif" alt="Native Form validation demo" width="400"/>
+</p>
+
+
 
 Retrieve all field validations using the `validateForm` extension:
 
