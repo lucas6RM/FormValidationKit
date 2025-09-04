@@ -29,7 +29,7 @@ This library is widely inspired by the following article:
 Add the package via URL:
 
 ```
-https://github.com/your-repo/FormValidationKit.git
+https://github.com/lucas6RM/FormValidationKit.git
 ```
 
 In Xcode: `File → Swift Packages → Add Package Dependency` → paste the URL.
