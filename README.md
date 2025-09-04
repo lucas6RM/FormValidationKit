@@ -91,12 +91,21 @@ TextFormView { validateAllFields in
                 ValidationRule(validate: { email.count > 6 }, errorMessage: "Email must be longer than 6 characters")
             ])
 
-        Button("Validate") {
+{ ... }
+                
+        Button {
             if validateAllFields() {
-                print("Form is valid")
-            } else {
-                print("Form is invalid")
+                isFormValidated = true
             }
+            else {
+                isFormValidated = false
+            }
+            
+        } label: {
+            Text("Validate all Textfields")
+                .padding(.all)
+                .background(.gray.opacity(0.2))
+                .cornerRadius(16)
         }
     }
 }
@@ -104,7 +113,7 @@ TextFormView { validateAllFields in
 
 - `validateAllFields()` returns `true` if all validations pass.
     
-- You can **customize error messages**:
+- You can **customize error messages**, or use the default style:
 
 
 ```swift
@@ -132,11 +141,13 @@ TextField("Name", text: $name)
 Retrieve all field validations using the `validateForm` extension:
 
 ```swift
+
 Form {
     TextField("Email", text: $email)
         .validate([
             ValidationRule(validate: { email.count > 6 }, errorMessage: "Email too short")
         ])
+ {...}
 
     TextField("Name", text: $name)
         .validate([
@@ -147,14 +158,21 @@ Form {
     validationResults = results
 }
 
-Button("Validate") {
-    if validationResults.allSatisfy({ $0.isValid }) {
-        print("Form is valid")
-    } else {
-        print("Form is invalid")
+ {...}
+    
+    Button {
+        if validationResults.allSatisfy({ $0.isValid}) {
+            isFormValidated = true
+        }
+        else {
+            isFormValidated = false
+        }
+    } label: {
+        Text("Validate form")
+            .padding()
+            .background(.gray.opacity(0.2))
+            .cornerRadius(16)
     }
-}
-.disabled(!validationResults.allSatisfy({ $0.isValid }))
 ```
 
 - Each field can have a **custom error view** or use the default style (red caption text).
