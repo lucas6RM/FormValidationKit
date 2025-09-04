@@ -73,6 +73,8 @@ public struct ValidationResult: Equatable {
 
 ## Use Case 1: Custom Form with `TextFormView`
 
+![Form validation demo](Assets/CustomFormSample.gif)
+
 For custom layouts or non-Form views:
 
 ```swift
