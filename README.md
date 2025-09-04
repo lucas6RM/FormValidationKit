@@ -1,4 +1,8 @@
 # FormValidationKit
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 657a4637340c10814fab072c03afdf81fd24297d
 
 [![Swift Version](https://img.shields.io/badge/Swift-6-orange.svg?style=flat)](https://swift.org/)
 [![Platforms](https://img.shields.io/badge/iOS-15%2B-blue.svg?style=flat)](https://developer.apple.com/ios/)
@@ -203,3 +207,9 @@ FormValidationKit/
 MIT License – see LICENSE file.
 
 This project is **open source** and welcomes contributions! Feel free to **fork**, make improvements, and submit **pull requests**.
+<<<<<<< HEAD
+=======
+=======
+FormValidationKit is a lightweight SwiftUI library for TextField and Form validation. 
+>>>>>>> 220701fb9049fd6ca1947ad57c515b8432226721
+>>>>>>> 657a4637340c10814fab072c03afdf81fd24297d
