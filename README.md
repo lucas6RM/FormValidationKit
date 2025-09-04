@@ -1,16 +1,24 @@
 # FormValidationKit
 
-[![Swift Version](https://img.shields.io/badge/Swift-5.9-orange.svg?style=flat)](https://swift.org)
-[![Platforms](https://img.shields.io/badge/iOS-13%2B-blue.svg?style=flat)](https://developer.apple.com/ios/)
-[![Swift Package](https://img.shields.io/badge/Swift_Package-✅-brightgreen.svg)](https://swift.org/package-manager/)
-[![Build](https://github.com/your-repo/FormValidationKit/actions/workflows/ci.yml/badge.svg)](https://github.com/your-repo/FormValidationKit/actions/workflows/ci.yml)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Swift Version](https://img.shields.io/badge/Swift-6-orange.svg?style=flat)](https://swift.org/)
+[![Platforms](https://img.shields.io/badge/iOS-15%2B-blue.svg?style=flat)](https://developer.apple.com/ios/)
+[![Swift Package](https://img.shields.io/badge/Swift_Package-%E2%9C%85-brightgreen.svg)](https://swift.org/package-manager/)
+[![Build](https://github.com/your-repo/FormValidationKit/actions/workflows/ci.yml/badge.svg)](https://github.com/lucas6RM/FormValidationKit/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]
 
 **FormValidationKit** is a lightweight SwiftUI library for **TextField and Form validation**. It provides:
 
-* A simple API to validate individual fields with error messages.
-* Easy integration with SwiftUI `Form` for native form validation.
-* The ability to **customize error message display** (color, alignment, style).
+- A simple API to validate individual fields with error messages.
+    
+- Easy integration with SwiftUI `Form` for native form validation.
+    
+- The ability to **customize error message display** (color, alignment, style).
+    
+This project is open source! Anyone is welcome to **fork**, make changes, and submit **pull requests**.
+
+This library is widely inspired by the following article, and I want to credit the author:
+[How to validate TextFields in SwiftUI like a pro](https://medium.com/@mhmtkrnlk/how-to-validate-textfields-in-swiftui-like-a-pro-3dbe368d1570)
+
 
 ---
 
@@ -86,8 +94,10 @@ TextFormView { validateAllFields in
 }
 ```
 
-* `validateAllFields()` returns `true` if all validations pass.
-* You can **customize error messages**:
+- `validateAllFields()` returns `true` if all validations pass.
+    
+- You can **customize error messages**:
+
 
 ```swift
 TextField("Name", text: $name)
@@ -131,14 +141,14 @@ Button("Validate") {
 .disabled(!validationResults.allSatisfy({ $0.isValid }))
 ```
 
-* Each field can have a **custom error view** or use the default style (red caption text).
+- Each field can have a **custom error view** or use the default style (red caption text).
 
 ---
 
 ## Customization
 
-* Customize error message color and alignment via the `errorView` builder.
-* Set a fixed height for the error `Text` to prevent layout jumps:
+- Customize error message via the `errorView` builder.
+    
 
 ```swift
 TextField("Phone", text: $phone)
@@ -156,15 +166,16 @@ TextField("Phone", text: $phone)
 
 ## Compatibility
 
-* SwiftUI iOS 13+ (for `Form`)
-* iOS 15+ for `TextFormView` and `@MainActor` usage
+- SwiftUI iOS 15+
 
 ---
 
 ## Examples
 
-* `Examples/ValidateTextFieldsSampleView.swift` → Custom form using `TextFormView`.
-* `Examples/ValidationFormSample.swift` → Native SwiftUI `Form` using `Form.validateForm`.
+- `Examples/ValidateTextFieldsSampleView.swift` → Custom form using `TextFormView`.
+    
+- `Examples/ValidationFormSample.swift` → Native SwiftUI `Form` using `Form.validateForm`.
+    
 
 ---
 
@@ -187,24 +198,8 @@ FormValidationKit/
 
 ---
 
-## Unit Tests
-
-Includes a test target `FormValidationKitTests` to validate rules and results:
-
-```swift
-func testValidationResult() {
-    let rule = ValidationRule(validate: { false }, errorMessage: "fail")
-    let result = rule.evaluate()
-    XCTAssertFalse(result.isValid)
-    XCTAssertEqual(result.errorMessage, "fail")
-}
-```
-
-Build and test badges reflect the GitHub Actions workflow.
-
----
-
 ## License
 
 MIT License – see LICENSE file.
 
+This project is **open source** and welcomes contributions! Feel free to **fork**, make improvements, and submit **pull requests**.
