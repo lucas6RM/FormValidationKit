@@ -4,7 +4,7 @@
 [![Swift Version](https://img.shields.io/badge/Swift-6-orange.svg?style=flat)](https://swift.org/)
 [![Platforms](https://img.shields.io/badge/iOS-15%2B-blue.svg?style=flat)](https://developer.apple.com/ios/)
 [![Swift Package](https://img.shields.io/badge/Swift_Package-%E2%9C%85-brightgreen.svg)](https://swift.org/package-manager/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]
+[!License](https://img.shields.io/badge/License-MIT-green.svg)
 
 **FormValidationKit** is a lightweight SwiftUI library for **TextField and Form validation**. It provides:
 
